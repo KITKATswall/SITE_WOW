@@ -3,34 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Сюрприз</title>
+    <title>Аудиопранк</title>
     <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             background-color: black;
-            color: white;
-            font-size: 24px;
+            text-align: center;
+            padding-top: 50px;
         }
-        button {
+        #playButton {
+            background-color: red;
+            color: white;
             font-size: 20px;
-            padding: 10px 20px;
+            padding: 15px 30px;
+            border: none;
             cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <button onclick="playAudio()">Нажми меня</button>
-    <audio id="rick" src="audio.mp3/Rick_Astley_-_Never_Gonna_Give_You_Up_47958276.mp3"></audio>
+    <button id="playButton">НАЖМИ МЕНЯ</button>
+    <audio id="audio" src="https://kitkatswall.github.io/SITE_WOW/Rick_Astley_-_Never_Gonna_Give_You_Up_47958276.mp3"></audio>
 
     <script>
-        function playAudio() {
-            let audio = document.getElementById("rick");
-            audio.volume = 1.0;
+        document.getElementById("playButton").addEventListener("click", function () {
+            let audio = document.getElementById("audio");
             audio.play();
-        }
+            this.style.display = "none";
+        });
     </script>
 </body>
 </html>
