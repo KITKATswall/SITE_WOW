@@ -3,33 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Аудиопранк</title>
+    <title>Музыкальный пранк</title>
     <style>
         body {
             background-color: black;
             text-align: center;
-            padding-top: 50px;
         }
-        #playButton {
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
             background-color: red;
             color: white;
-            font-size: 20px;
-            padding: 15px 30px;
             border: none;
             cursor: pointer;
+            border-radius: 5px;
+        }
+        audio {
+            display: none;
         }
     </style>
 </head>
 <body>
-    <button id="playButton">НАЖМИ МЕНЯ</button>
-    <audio id="audio" src="https://kitkatswall.github.io/SITE_WOW/Rick_Astley_-_Never_Gonna_Give_You_Up_47958276.mp3"></audio>
+
+    <button onclick="playAudio()">НАЖМИ В МЕНЯ</button>
+    <audio id="rickroll" src="Rick_Astley_-_Never_Gonna_Give_You_Up_47958276.mp3"></audio>
 
     <script>
-        document.getElementById("playButton").addEventListener("click", function () {
-            let audio = document.getElementById("audio");
+        function playAudio() {
+            let audio = document.getElementById("rickroll");
             audio.play();
-            this.style.display = "none";
-        });
+        }
     </script>
+
 </body>
 </html>
